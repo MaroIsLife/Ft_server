@@ -1,6 +1,5 @@
 # Ft_server
-
-# Commands
+ This is a System Administration subject. This project is a Web Server made with Docker.
 
 # Restart docker
 docker-machine restart

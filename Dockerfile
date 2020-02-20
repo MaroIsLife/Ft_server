@@ -1,5 +1,5 @@
 FROM debian:buster
-
+#Installing and updating Debian List.
 RUN apt-get update
 RUN apt-get install -y wget unzip vim lsb-release gnupg
 RUN apt-get install -y nginx
@@ -21,6 +21,7 @@ RUN echo "mysql-server-5.7 mysql-server/root_password password root" | debconf-s
 RUN echo "mysql-server-5.7 mysql-server/root_password_again password root" | debconf-set-selections
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y mysql-server
 #chown, -R mysql:mysql var/lib/mysql
+#Copying and editing Nginx configuration file
 RUN echo "daemon off;" >> etc/nginx/nginx.conf
 COPY srcs/default /etc/nginx/sites-available
 COPY srcs/wp-config.php /var/www/html
@@ -28,6 +29,7 @@ COPY srcs/script.sh /
 COPY srcs/mydb.sql /
 COPY srcs/config.inc.php /var/www/html/phpmyadmin
 COPY srcs/phpmyadmin.sql /
+#SSL 
 COPY srcs/server.crt /etc/ssl/private
 COPY srcs/server.csr /etc/ssl/private
 COPY srcs/server.key /etc/ssl/private

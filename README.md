@@ -23,3 +23,7 @@ docker container stop test
 
 # Running containers
 docker ps
+
+# Username/Password
+Username: Maro
+Password: root

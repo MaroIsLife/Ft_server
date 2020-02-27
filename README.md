@@ -6,7 +6,7 @@ docker-machine restart
 eval $(docker-machine env default)
 
 # Build image
-docker image build -t test .
+docker image build -t maro .
 
 # Clear
 docker system prune
@@ -19,10 +19,10 @@ docker run -d -p 443:443 -p 80:80 container_id
 OR
 docker run -d -p 443:443 -p 80:80 -p 8080:8080 -p 3306:3306 -p 33060:33060 container_id
 OR
-docker run -tid --rm --privileged --name test -p 443:443 -p 80:80 -p 8080:8080 -p 3306:3306 -p 33060:33060 test
+docker run -tid --rm --privileged --name test -p 443:443 -p 80:80 -p 8080:8080 -p 3306:3306 -p 33060:33060 maro
 
 # Stop container
-docker container stop test
+docker container stop maro
 
 # Running containers
 docker ps

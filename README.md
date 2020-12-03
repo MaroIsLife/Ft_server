@@ -19,7 +19,7 @@ docker image prune
 docker run -d -p 443:443 -p 80:80 container_id
 
 # Stop container
-docker container stop maro
+docker container stop container_id
 
 # Running containers
 docker ps 

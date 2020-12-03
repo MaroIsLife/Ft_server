@@ -18,10 +18,6 @@ docker image prune -a
 
 # Run container
 docker run -d -p 443:443 -p 80:80 container_id
-OR
-docker run -d -p 443:443 -p 80:80 -p 8080:8080 -p 3306:3306 -p 33060:33060 container_id
-OR
-docker run -tid --rm --privileged --name test -p 443:443 -p 80:80 -p 8080:8080 -p 3306:3306 -p 33060:33060 maro
 
 # Stop container
 docker container stop maro

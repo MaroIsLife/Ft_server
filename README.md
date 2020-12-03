@@ -27,7 +27,7 @@ docker run -tid --rm --privileged --name test -p 443:443 -p 80:80 -p 8080:8080 -
 docker container stop maro
 
 # Running containers
-docker ps
+docker ps 
 
 # Username/Password
 Username: Maro

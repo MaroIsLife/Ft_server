@@ -12,9 +12,8 @@ docker image build -t maro .
 
 # Clear
 docker system prune
-docker system prune -a
+&&
 docker image prune
-docker image prune -a
 
 # Run container
 docker run -d -p 443:443 -p 80:80 container_id

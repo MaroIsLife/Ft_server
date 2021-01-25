@@ -1,5 +1,5 @@
 # Ft_server
- This is a System Administration subject. This project is a Web Server made with Docker. (42 Login MOUGNOU)
+ This is a System Administration subject. This project is a Web Server made with Docker.
  
  Building an image then Running the container which will run a fully functional web server with wordpress and phpmyadmin included. 
 
